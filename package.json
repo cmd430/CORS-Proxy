@@ -1,0 +1,16 @@
+{
+  "name": "cors-proxy",
+  "version": "0.0.1",
+  "description": "A simple CORS proxy",
+  "main": "index.js",
+  "keywords": [
+    "CORS",
+    "Proxy"
+  ],
+  "author": "cmd430",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}

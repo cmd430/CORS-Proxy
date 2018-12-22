@@ -23,7 +23,7 @@ express.all('*', (req, res, next) => {
       method: req.method, 
       json: req.body, 
       headers: {
-        'Authorization': req.header('Authorization') || 'noauth'
+        'Authorization': req.get('Authorization') || 'noauth'
       } 
     }, (err, response, body) => {}).pipe(res)
   }

@@ -23,6 +23,8 @@ const config = {
     ]
   },
   cors: {
+    // Any property/value accepted by
+    // https://www.npmjs.com/package/cors
     origin: '*',
     methods: [
       'GET'

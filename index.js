@@ -13,6 +13,13 @@ const config = {
       // origin to use the CORS proxy.
       //
       // example: 'https://example.com'
+      //
+      // NOTE: the Origin header can be set
+      // manually so this is only a very
+      // basic means to prevent unwanted use
+      // you would probably want to use a more
+      // secure method to enforce this in a
+      // production environment
     ],
     passthrough: [
       // Any headers you want to allow

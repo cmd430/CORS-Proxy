@@ -19,7 +19,7 @@ app.route('*')
 .all(cors(config.cors), (req, res, next) => {
   let targetURL = req.url.slice(1)
   if (!targetURL) {
-    return res.status(400).send('missing url')
+    return res.status(400).json({ error: 'missing url' })
   }
   request({
     url: targetURL,

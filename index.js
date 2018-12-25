@@ -36,9 +36,7 @@ app.route('*')
   request({
     url: targetURL,
     method: req.method,
-    headers: {
-      'Authorization': req.headers['authorization'] || 'noauth'
-    }
+    headers: req.headers
   })
   .pipe(res)
 })

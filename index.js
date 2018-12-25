@@ -49,10 +49,12 @@ app.route('*')
   let targetURL = req.url.slice(1)
   if (config.app.restricted && !config.app.whitelist.includes(req.headers['origin'])) {
     return res.status(401).json({ error: 'unauthorized' })
+  } else if (!config.cors.methods.includes(req.method)) {
+    return res.status(400).json({ error: 'invalid request type' })
   } else if (!targetURL || !targetURL.startsWith('http')) {
     return res.status(400).json({ error: 'missing valid url' })
   }
-  request({
+  return request({
     url: targetURL,
     method: req.method,
     headers: passthrough(req.headers)
